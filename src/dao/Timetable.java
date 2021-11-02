@@ -35,7 +35,7 @@ public class Timetable {
 	private final HashMap<Integer, classRoom> rooms;
 	private final HashMap<Integer, Lecturer> lecturer;
 	private final HashMap<Integer, Subject> subject;
-	private final HashMap<Integer, Group> groups;
+	private final HashMap<String, Group> groups;
 	private final HashMap<Integer, Slot> slots;
 	private FPTClass classes[];
 	private int numClasses = 0;
@@ -43,7 +43,7 @@ public class Timetable {
 		this.rooms = new HashMap<Integer, classRoom>();
 		this.lecturer = new HashMap<Integer, Lecturer>();
 		this.subject = new HashMap<Integer, Subject>();
-		this.groups = new HashMap<Integer, Group>();
+		this.groups = new HashMap<String, Group>();
 		this.slots = new HashMap<Integer, Slot>();
 	}
 public Timetable(Timetable cloneable) {
@@ -66,7 +66,7 @@ public Timetable(Timetable cloneable) {
         return slots;
     }
 
-    private HashMap<Integer, Group> getGroups() {
+    private HashMap<String, Group> getGroups() {
 	return this.groups;
     }
 // addnew room 
@@ -83,13 +83,13 @@ public Timetable(Timetable cloneable) {
 		this.subject.putIfAbsent(subjectId, new Subject(subjectId, subjectCode, subjectName, lecturerIds));
 	}
 // add group
-	public void addGroup(int groupId, int groupSize, int moduleIds[]) {
+	public void addGroup(String groupId, int groupSize, int moduleIds[]) {
 		this.groups.put(groupId, new Group(groupId, groupSize, moduleIds));
 		this.numClasses = 0;
 	}
 // add slot
-	public void addSlot(int slotId, String timeslot) {
-		this.slots.putIfAbsent(slotId, new Slot(slotId, timeslot));
+	public void addSlot(int slotId,String Date, String timeslot) {
+		this.slots.putIfAbsent(slotId, new Slot(slotId,Date, timeslot));
 	}
 
 	/**
@@ -170,7 +170,7 @@ public Timetable(Timetable cloneable) {
 		return group.getSubjectIds();
 	}
 // tìm group từ group id
-	public Group getGroup(int groupId) {
+	public Group getGroup(String groupId) {
 		return (Group) this.groups.get(groupId);
 	}
 

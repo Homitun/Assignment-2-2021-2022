@@ -126,47 +126,70 @@ public class TimetableGA {
 		timetable.addRoom(5, "F1", 25);
 
 		// Set up timeslots
-		timetable.addTimeslot(1, "Mon 9:00 - 11:00");
-		timetable.addTimeslot(2, "Mon 11:00 - 13:00");
-		timetable.addTimeslot(3, "Mon 13:00 - 15:00");
-		timetable.addTimeslot(4, "Tue 9:00 - 11:00");
-		timetable.addTimeslot(5, "Tue 11:00 - 13:00");
-		timetable.addTimeslot(6, "Tue 13:00 - 15:00");
-		timetable.addTimeslot(7, "Wed 9:00 - 11:00");
-		timetable.addTimeslot(8, "Wed 11:00 - 13:00");
-		timetable.addTimeslot(9, "Wed 13:00 - 15:00");
-		timetable.addTimeslot(10, "Thu 9:00 - 11:00");
-		timetable.addTimeslot(11, "Thu 11:00 - 13:00");
-		timetable.addTimeslot(12, "Thu 13:00 - 15:00");
-		timetable.addTimeslot(13, "Fri 9:00 - 11:00");
-		timetable.addTimeslot(14, "Fri 11:00 - 13:00");
-		timetable.addTimeslot(15, "Fri 13:00 - 15:00");
+                timetable.addSlot(1, "Mon", "7:00-8:30:00" );
+                timetable.addSlot(2, "Mon", "8:45-10:15" );
+                timetable.addSlot(3, "Mon", "10:30-12:00" );
+                timetable.addSlot(4, "Mon", "12:30-14:00" );
+                timetable.addSlot(5, "Mon", "14:15-15:45" );
+                timetable.addSlot(6, "Mon", "16:00-17:30" );
+                
+                timetable.addSlot(1, "Tue", "7:00-8:30:00" );
+                timetable.addSlot(2, "Tue", "8:45-10:15" );
+                timetable.addSlot(3, "Tue", "10:30-12:00" );
+                timetable.addSlot(4, "Tue", "12:30-14:00" );
+                timetable.addSlot(5, "Tue", "14:15-15:45" );
+                timetable.addSlot(6, "Tue", "16:00-17:30" );
+                
+//                timetable.addSlot(1, "Wed", "7:00-8:30:00" );
+//                timetable.addSlot(2, "Wed", "8:45-10:15" );
+//                timetable.addSlot(3, "Wed", "10:30-12:00" );
+//                timetable.addSlot(4, "Wed", "12:30-14:00" );
+//                timetable.addSlot(5, "Wed", "14:15-15:45" );
+//                timetable.addSlot(6, "Wed", "16:00-17:30" );
+//                
+//                timetable.addSlot(1, "Thu", "7:00-8:30:00" );
+//                timetable.addSlot(2, "Thu", "8:45-10:15" );
+//                timetable.addSlot(3, "Thu", "10:30-12:00" );
+//                timetable.addSlot(4, "Thu", "12:30-14:00" );
+//                timetable.addSlot(5, "Thu", "14:15-15:45" );
+//                timetable.addSlot(6, "Thu", "16:00-17:30" );
+//                
+//                timetable.addSlot(1, "Fri", "7:00-8:30:00" );
+//                timetable.addSlot(2, "Fri", "8:45-10:15" );
+//                timetable.addSlot(3, "Fri", "10:30-12:00" );
+//                timetable.addSlot(4, "Fri", "12:30-14:00" );
+//                timetable.addSlot(5, "Fri", "14:15-15:45" );
+//                timetable.addSlot(6, "Fri", "16:00-17:30" );
+                
+               
+		
 
 		// Set up professors
-		timetable.addProfessor(1, "Dr P Smith");
-		timetable.addProfessor(2, "Mrs E Mitchell");
-		timetable.addProfessor(3, "Dr R Williams");
-		timetable.addProfessor(4, "Mr A Thompson");
+		timetable.addLecturer(1, "NgocNT");
+		timetable.addLecturer(2, "MaiHT");
+		timetable.addLecturer(3, "PhongDB");
+		timetable.addLecturer(4, "HoangBT");
+		timetable.addLecturer(5, "VuongHM");
 
 		// Set up modules and define the professors that teach them
-		timetable.addModule(1, "cs1", "Computer Science", new int[] { 1, 2 });
-		timetable.addModule(2, "en1", "English", new int[] { 1, 3 });
-		timetable.addModule(3, "ma1", "Maths", new int[] { 1, 2 });
-		timetable.addModule(4, "ph1", "Physics", new int[] { 3, 4 });
-		timetable.addModule(5, "hi1", "History", new int[] { 4 });
-		timetable.addModule(6, "dr1", "Drama", new int[] { 1, 4 });
+		timetable.addSubject(1, "LAB211", "OOP with Java Lab", new int[]{1,3});
+		timetable.addSubject(2, "CSD201", "Data Structures and Algorithms", new int[]{1,3,4});
+		timetable.addSubject(3, "DBI202", "Database Systems", new int[]{3,4});
+		timetable.addSubject(4, "JPD113", "Japanese Elementary", new int[]{4,5});
+		timetable.addSubject(5, "WED201c", "Web Design", new int[]{5});
 
 		// Set up student groups and the modules they take.
-		timetable.addGroup(1, 10, new int[] { 1, 3, 4 });
-		timetable.addGroup(2, 30, new int[] { 2, 3, 5, 6 });
-		timetable.addGroup(3, 18, new int[] { 3, 4, 5 });
-		timetable.addGroup(4, 25, new int[] { 1, 4 });
-		timetable.addGroup(5, 20, new int[] { 2, 3, 5 });
-		timetable.addGroup(6, 22, new int[] { 1, 4, 5 });
-		timetable.addGroup(7, 16, new int[] { 1, 3 });
-		timetable.addGroup(8, 18, new int[] { 2, 6 });
-		timetable.addGroup(9, 24, new int[] { 1, 6 });
-		timetable.addGroup(10, 25, new int[] { 3, 4 });
+                
+		timetable.addGroup("SE1501", 10, new int[] { 1, 3, 4 });
+		timetable.addGroup("SE1502", 30, new int[] { 2, 3, 5,  });
+		timetable.addGroup("SE1503", 18, new int[] { 3, 4, 5 });
+		timetable.addGroup("SE1504", 25, new int[] { 1, 4 });
+		timetable.addGroup("SE1505", 20, new int[] { 2, 3, 5 });
+		timetable.addGroup("SE1506", 22, new int[] { 1, 4, 5 });
+		timetable.addGroup("SE1507", 16, new int[] { 1, 3 });
+		timetable.addGroup("SE1508", 18, new int[] { 2, 6 });
+		timetable.addGroup("SE1509", 24, new int[] { 1, 5 });
+		timetable.addGroup("SE1510", 25, new int[] { 3, 4 });
 		return timetable;
 	}
 }

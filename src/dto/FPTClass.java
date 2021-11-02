@@ -8,13 +8,13 @@ package dto;
 
 public class FPTClass {
     private final int classId;
-    private final int groupId;
+    private final String groupId;
     private final int subjectId;
     private int lecturerId;
     private int slotId;
     private int roomId;
 
-    public FPTClass(int classId, int groupId, int subjectId) {
+    public FPTClass(int classId, String groupId, int subjectId) {
         this.classId = classId;
         this.groupId = groupId;
         this.subjectId = subjectId;
@@ -37,7 +37,7 @@ public class FPTClass {
         return this.classId;
     }
    
-    public int getGroupId(){
+    public String getGroupId(){
         return this.groupId;
     }
 

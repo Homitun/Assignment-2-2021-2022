@@ -6,17 +6,17 @@ package dto;
  * @author Walter White
  */
 public class Group {
-    private final int groupId;
+    private final String groupId;
     private final int groupSize;
     private final int[] subjectIds;
 
-    public Group(int groupId, int groupSize, int moduleIds[]){
+    public Group(String groupId, int groupSize, int moduleIds[]){
         this.groupId = groupId;
         this.groupSize = groupSize;
         this.subjectIds = moduleIds;
     }
     
-    public int getGroupId(){
+    public String getGroupId(){
         return this.groupId;
     }
  
