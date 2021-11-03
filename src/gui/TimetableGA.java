@@ -92,15 +92,15 @@ public class TimetableGA {
         int classIndex = 1;
         for (FPTClass bestClass : classes) {
             System.out.println("Class " + classIndex + ":");
-            System.out.println("Module: " + 
+            System.out.println("Subject: " + 
                     timetable.getSubject(bestClass.getSubjectId()).getSubjectName());
             System.out.println("Group: " + 
                     timetable.getGroup(bestClass.getGroupId()).getGroupId());
             System.out.println("Room: " + 
                     timetable.getRoom(bestClass.getRoomId()).getRoomNumber());                            
-            System.out.println("Professor: " + 
+            System.out.println("Lecturer: " + 
                     timetable.getLecturer(bestClass.getLecturerId()).getLecturerName());
-            System.out.println("Time: " + 
+            System.out.println("Slot: " + 
                     timetable.getTimeslot(bestClass.getSlotId()).getTimeslot());
           
             System.out.println("-----");
@@ -120,46 +120,52 @@ public class TimetableGA {
 		Timetable timetable = new Timetable();
 
 		// Set up rooms
-		timetable.addRoom(1, "A1", 15);
-		timetable.addRoom(2, "B1", 30);
-		timetable.addRoom(4, "D1", 20);
-		timetable.addRoom(5, "F1", 25);
+		timetable.addRoom(1, "201", 15);
+		timetable.addRoom(2, "202", 30);
+		timetable.addRoom(3, "210", 30);
+		timetable.addRoom(4, "203", 20);
+		timetable.addRoom(5, "204", 25);
+		timetable.addRoom(6, "205", 25);
+		timetable.addRoom(7, "206", 25);
+		timetable.addRoom(8, "207", 25);
+		timetable.addRoom(9, "208", 25);
+		timetable.addRoom(10, "209", 25);
 
 		// Set up timeslots
-                timetable.addSlot(1, "Mon", "7:00-8:30:00" );
-                timetable.addSlot(2, "Mon", "8:45-10:15" );
-                timetable.addSlot(3, "Mon", "10:30-12:00" );
-                timetable.addSlot(4, "Mon", "12:30-14:00" );
-                timetable.addSlot(5, "Mon", "14:15-15:45" );
-                timetable.addSlot(6, "Mon", "16:00-17:30" );
+                timetable.addSlot(1, "Mon", "[Slot 1]:7:00-8:30:00" );
+                timetable.addSlot(2, "Mon", "[Slot 2]:8:45-10:15" );
+                timetable.addSlot(3, "Mon", "[Slot 3]:10:30-12:00" );
+                timetable.addSlot(4, "Mon", "[Slot 4]:12:30-14:00" );
+                timetable.addSlot(5, "Mon", "[Slot 5]:14:15-15:45" );
+                timetable.addSlot(6, "Mon", "[Slot 6]:16:00-17:30" );
                 
-                timetable.addSlot(1, "Tue", "7:00-8:30:00" );
-                timetable.addSlot(2, "Tue", "8:45-10:15" );
-                timetable.addSlot(3, "Tue", "10:30-12:00" );
-                timetable.addSlot(4, "Tue", "12:30-14:00" );
-                timetable.addSlot(5, "Tue", "14:15-15:45" );
-                timetable.addSlot(6, "Tue", "16:00-17:30" );
+                timetable.addSlot(7, "Tue", "[Slot 1]:7:00-8:30:00" );
+                timetable.addSlot(8, "Tue", "[Slot 2]:8:45-10:15" );
+                timetable.addSlot(9, "Tue", "[Slot 3]:10:30-12:00" );
+                timetable.addSlot(10, "Tue", "[Slot 4]:12:30-14:00" );
+                timetable.addSlot(11, "Tue", "[Slot 5]:14:15-15:45" );
+                timetable.addSlot(12, "Tue", "[Slot 6]:16:00-17:30" );
                 
-//                timetable.addSlot(1, "Wed", "7:00-8:30:00" );
-//                timetable.addSlot(2, "Wed", "8:45-10:15" );
-//                timetable.addSlot(3, "Wed", "10:30-12:00" );
-//                timetable.addSlot(4, "Wed", "12:30-14:00" );
-//                timetable.addSlot(5, "Wed", "14:15-15:45" );
-//                timetable.addSlot(6, "Wed", "16:00-17:30" );
-//                
-//                timetable.addSlot(1, "Thu", "7:00-8:30:00" );
-//                timetable.addSlot(2, "Thu", "8:45-10:15" );
-//                timetable.addSlot(3, "Thu", "10:30-12:00" );
-//                timetable.addSlot(4, "Thu", "12:30-14:00" );
-//                timetable.addSlot(5, "Thu", "14:15-15:45" );
-//                timetable.addSlot(6, "Thu", "16:00-17:30" );
-//                
-//                timetable.addSlot(1, "Fri", "7:00-8:30:00" );
-//                timetable.addSlot(2, "Fri", "8:45-10:15" );
-//                timetable.addSlot(3, "Fri", "10:30-12:00" );
-//                timetable.addSlot(4, "Fri", "12:30-14:00" );
-//                timetable.addSlot(5, "Fri", "14:15-15:45" );
-//                timetable.addSlot(6, "Fri", "16:00-17:30" );
+                timetable.addSlot(13, "Wed", "[Slot 1]:7:00-8:30:00" );
+                timetable.addSlot(14, "Wed", "[Slot 2]:8:45-10:15" );
+                timetable.addSlot(15, "Wed", "[Slot 3]:10:30-12:00" );
+                timetable.addSlot(16, "Wed", "[Slot 4]:12:30-14:00" );
+                timetable.addSlot(17, "Wed", "[Slot 5]:14:15-15:45" );
+                timetable.addSlot(18, "Wed", "[Slot 6]:16:00-17:30" );
+                
+                timetable.addSlot(19, "Thu", "[Slot 1]:7:00-8:30:00" );
+                timetable.addSlot(20, "Thu", "[Slot 2]:8:45-10:15" );
+                timetable.addSlot(21, "Thu", "[Slot 3]:10:30-12:00" );
+                timetable.addSlot(22, "Thu", "[Slot 4]:12:30-14:00" );
+                timetable.addSlot(23, "Thu", "[Slot 5]:14:15-15:45" );
+                timetable.addSlot(24, "Thu", "[Slot 6]:16:00-17:30" );
+                
+                timetable.addSlot(25, "Fri", "[Slot 1]:7:00-8:30:00" );
+                timetable.addSlot(26, "Fri", "[Slot 2]:8:45-10:15" );
+                timetable.addSlot(27, "Fri", "[Slot 3]:10:30-12:00" );
+                timetable.addSlot(28, "Fri", "[Slot 4]:12:30-14:00" );
+                timetable.addSlot(29, "Fri", "[Slot 5]:14:15-15:45" );
+                timetable.addSlot(30, "Fri", "[Slot 6]:16:00-17:30" );
                 
                
 		
@@ -170,6 +176,7 @@ public class TimetableGA {
 		timetable.addLecturer(3, "PhongDB");
 		timetable.addLecturer(4, "HoangBT");
 		timetable.addLecturer(5, "VuongHM");
+		timetable.addLecturer(6, "PhongHM");
 
 		// Set up modules and define the professors that teach them
 		timetable.addSubject(1, "LAB211", "OOP with Java Lab", new int[]{1,3});
@@ -177,6 +184,7 @@ public class TimetableGA {
 		timetable.addSubject(3, "DBI202", "Database Systems", new int[]{3,4});
 		timetable.addSubject(4, "JPD113", "Japanese Elementary", new int[]{4,5});
 		timetable.addSubject(5, "WED201c", "Web Design", new int[]{5});
+		timetable.addSubject(6, "VOV", "Vovinam", new int[]{6});
 
 		// Set up student groups and the modules they take.
                 
