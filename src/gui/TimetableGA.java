@@ -9,55 +9,19 @@ import dao.GeneticAlgorithm;
 import dao.Population;
 import dao.Timetable;
 import dto.FPTClass;
-import java.io.BufferedReader;
 import java.io.BufferedWriter;
 import java.io.FileNotFoundException;
 import java.io.FileWriter;
-import java.io.IOException;
-import java.io.PrintWriter;
-import java.util.ArrayList;
-import java.io.File;
-import java.io.FileInputStream;
-import java.io.FileOutputStream;
-import java.io.FileReader;
 import java.io.IOException;
 
 /**
  *
  * @author Walter White
  */
-
-/**
- * Don't be daunted by the number of classes in this chapter -- most of them are
- * just simple containers for information, and only have a handful of properties
- * with setters and getters.
- * 
- * The real stuff happens in the GeneticAlgorithm class and the Timetable class.
- * 
- * The Timetable class is what the genetic algorithm is expected to create a
- * valid version of -- meaning, after all is said and done, a chromosome is read
- * into a Timetable class, and the Timetable class creates a nicer, neater
- * representation of the chromosome by turning it into a proper list of Classes
- * with rooms and professors and whatnot.
- * 
- * The Timetable class also understands the problem's Hard Constraints (ie, a
- * professor can't be in two places simultaneously, or a room can't be used by
- * two classes simultaneously), and so is used by the GeneticAlgorithm's
- * calcFitness class as well.
- * 
- * Finally, we overload the Timetable class by entrusting it with the
- * "database information" generated here in initializeTimetable. Normally, that
- * information about what professors are employed and which classrooms the
- * university has would come from a database, but this isn't a book about
- * databases so we hardcode it.
- * 
- * @author bkanber
- *
- */
 public class TimetableGA {
 
     public static void main(String[] args) throws FileNotFoundException {
-    	// Get a Timetable object with all the available information.
+    	// import dữ liệu
         
         Timetable timetable = initializeTimetable();
         
@@ -166,27 +130,13 @@ public class TimetableGA {
        
        
     }
-        
-
-    
-    
-    
-        
-    
-
-    /**
-     * Creates a Timetable with all the necessary course information.
-     * 
-     * Normally you'd get this info from a database.
-     * 
-     * @return
-     */
+// thêm thông tin thời khóa biểu
 	private static Timetable initializeTimetable() {
 		// Create timetable
 		Timetable timetable = new Timetable();
 
-		// Set up rooms
-		timetable.addRoom(1, "201", 15);
+		// Set up rooms(room id, room number, sức chứa)
+		timetable.addRoom(1, "201", 15);		
 		timetable.addRoom(2, "202", 30);
 		timetable.addRoom(3, "210", 30);
 		timetable.addRoom(4, "203", 20);
@@ -197,7 +147,7 @@ public class TimetableGA {
 		timetable.addRoom(9, "208", 25);
 		timetable.addRoom(10, "209", 25);
 
-		// Set up timeslots
+		// Set up timeslots: slot id, date, timeslot
                 timetable.addSlot(1, "Mon", "[Slot 1]:7:00-8:30:00" );
                 timetable.addSlot(2, "Mon", "[Slot 2]:8:45-10:15" );
                 timetable.addSlot(3, "Mon", "[Slot 3]:10:30-12:00" );
@@ -236,7 +186,7 @@ public class TimetableGA {
                
 		
 
-		// Set up professors
+		// add giáo viên(id, tên)
 		timetable.addLecturer(1, "NgocNT");
 		timetable.addLecturer(2, "MaiHT");
 		timetable.addLecturer(3, "PhongDB");
@@ -244,17 +194,20 @@ public class TimetableGA {
 		timetable.addLecturer(5, "VuongHM");
 		timetable.addLecturer(6, "PhongHM");
 
-		// Set up modules and define the professors that teach them
+		// add môn học id, subjectcode, subject name, lecture id là mảng, có nhiều gv dạy 1 môn
+                
 		timetable.addSubject(1, "LAB211", "OOP with Java Lab", new int[]{1,3});
+		
 		timetable.addSubject(2, "CSD201", "Data Structures and Algorithms", new int[]{1,3,4});
 		timetable.addSubject(3, "DBI202", "Database Systems", new int[]{3,4});
 		timetable.addSubject(4, "JPD113", "Japanese Elementary", new int[]{4,5});
 		timetable.addSubject(5, "WED201c", "Web Design", new int[]{5});
 		timetable.addSubject(6, "VOV", "Vovinam", new int[]{6});
 
-		// Set up student groups and the modules they take.
+		// add lớp id, số lượng học sinh, và môn học
                 
 		timetable.addGroup("SE1501", 10, new int[] { 1, 3, 4 });
+		
 		timetable.addGroup("SE1502", 30, new int[] { 2, 3, 5,  });
 		timetable.addGroup("SE1503", 18, new int[] { 3, 4, 5 });
 		timetable.addGroup("SE1504", 25, new int[] { 1, 4 });

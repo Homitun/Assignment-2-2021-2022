@@ -2,6 +2,13 @@
 <project-private xmlns="http://www.netbeans.org/ns/project-private/1">
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
-        <group/>
+        <group>
+            <file>file:/E:/CSD/Assignment-2-2021-2022/src/dao/Timetable.java</file>
+            <file>file:/E:/CSD/Assignment-2-2021-2022/src/dto/Lecturer.java</file>
+            <file>file:/E:/CSD/Assignment-2-2021-2022/src/gui/TimetableGA.java</file>
+            <file>file:/E:/CSD/Assignment-2-2021-2022/src/dao/Individual.java</file>
+            <file>file:/E:/CSD/Assignment-2-2021-2022/src/dao/GeneticAlgorithm.java</file>
+            <file>file:/E:/CSD/Assignment-2-2021-2022/src/dto/classRoom.java</file>
+        </group>
     </open-files>
 </project-private>
