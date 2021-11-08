@@ -56,6 +56,12 @@ public class FPTClass {
     public int getRoomId(){
         return this.roomId;
     }
+
+    @Override
+    public String toString() {
+        return   "\"" + "classId: " + classId + "\nClass: " + groupId + "\nsubjectId: " + subjectId + "\nlecturerId: " + lecturerId + ",slotId: " + slotId + "; roomId: " + roomId  + "\"";
+    }
+    
 }
 
 

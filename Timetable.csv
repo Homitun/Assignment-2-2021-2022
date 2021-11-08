@@ -1,0 +1,106 @@
+,Class,SE1501,SE1502,SE1503,SE1504,SE1505,SE1506,SE1507,SE1508,SE1509,SE1510,
+Mon,1,-,-,-,-,-,-,-,-,-,-,
+-,2,-,-,-,-,-,-,-,-,"classId: 11
+Class: SE1509
+subjectId: 5
+lecturerId: 5,slotId: 2; roomId: 2",-,
+-,3,-,-,-,-,-,-,-,-,-,-,
+-,4,-,-,-,-,-,-,-,-,-,-,
+-,5,-,-,-,-,-,-,-,-,-,-,
+-,6,-,-,-,-,-,-,-,-,-,-,
+Tue,1,-,-,-,-,-,-,"classId: 6
+Class: SE1507
+subjectId: 3
+lecturerId: 3,slotId: 7; roomId: 2",-,-,-,
+-,2,-,-,-,"classId: 24
+Class: SE1504
+subjectId: 4
+lecturerId: 4,slotId: 8; roomId: 8",-,-,-,-,-,-,
+-,3,"classId: 2
+Class: SE1501
+subjectId: 1
+lecturerId: 3,slotId: 9; roomId: 4",-,-,-,-,-,-,-,-,-,
+-,4,"classId: 4
+Class: SE1501
+subjectId: 4
+lecturerId: 4,slotId: 10; roomId: 6",-,-,-,-,"classId: 7
+Class: SE1506
+subjectId: 1
+lecturerId: 1,slotId: 10; roomId: 10",-,-,-,-,
+-,5,-,-,"classId: 16
+Class: SE1503
+subjectId: 5
+lecturerId: 5,slotId: 11; roomId: 10",-,-,-,-,-,-,-,
+-,6,-,-,-,-,-,-,"classId: 5
+Class: SE1507
+subjectId: 1
+lecturerId: 1,slotId: 12; roomId: 9",-,-,-,
+Wed,1,-,-,-,-,"classId: 21
+Class: SE1505
+subjectId: 3
+lecturerId: 4,slotId: 13; roomId: 9",-,-,-,-,-,
+-,2,"classId: 3
+Class: SE1501
+subjectId: 3
+lecturerId: 4,slotId: 14; roomId: 5",-,-,-,-,-,-,-,-,-,
+-,3,-,-,-,-,-,-,-,-,-,-,
+-,4,-,-,"classId: 14
+Class: SE1503
+subjectId: 3
+lecturerId: 4,slotId: 16; roomId: 10",-,-,-,-,-,"classId: 10
+Class: SE1509
+subjectId: 1
+lecturerId: 3,slotId: 16; roomId: 6",-,
+-,5,-,"classId: 19
+Class: SE1502
+subjectId: 5
+lecturerId: 5,slotId: 17; roomId: 2",-,-,-,-,-,-,-,-,
+-,6,-,-,-,-,-,-,-,-,-,-,
+Thur,1,-,-,-,-,"classId: 20
+Class: SE1505
+subjectId: 2
+lecturerId: 4,slotId: 19; roomId: 8",-,-,"classId: 12
+Class: SE1508
+subjectId: 2
+lecturerId: 3,slotId: 19; roomId: 4",-,-,
+-,2,-,-,-,-,-,"classId: 9
+Class: SE1506
+subjectId: 5
+lecturerId: 5,slotId: 20; roomId: 3",-,-,-,"classId: 0
+Class: SE1510
+subjectId: 3
+lecturerId: 4,slotId: 20; roomId: 7",
+-,3,-,-,-,-,-,-,-,-,-,"classId: 1
+Class: SE1510
+subjectId: 4
+lecturerId: 5,slotId: 21; roomId: 8",
+-,4,-,"classId: 18
+Class: SE1502
+subjectId: 3
+lecturerId: 4,slotId: 22; roomId: 3",-,-,-,-,-,-,-,-,
+-,5,-,"classId: 17
+Class: SE1502
+subjectId: 2
+lecturerId: 1,slotId: 23; roomId: 3",-,-,-,-,-,-,-,-,
+-,6,-,-,-,-,-,"classId: 8
+Class: SE1506
+subjectId: 4
+lecturerId: 4,slotId: 24; roomId: 10",-,-,-,-,
+Fri,1,-,-,-,"classId: 23
+Class: SE1504
+subjectId: 1
+lecturerId: 3,slotId: 25; roomId: 10",-,-,-,-,-,-,
+-,2,-,-,-,-,"classId: 22
+Class: SE1505
+subjectId: 5
+lecturerId: 5,slotId: 26; roomId: 5",-,-,-,-,-,
+-,3,-,-,-,-,-,-,-,-,-,-,
+-,4,-,-,"classId: 15
+Class: SE1503
+subjectId: 4
+lecturerId: 4,slotId: 28; roomId: 10",-,-,-,-,"classId: 13
+Class: SE1508
+subjectId: 6
+lecturerId: 6,slotId: 28; roomId: 5",-,-,
+-,5,-,-,-,-,-,-,-,-,-,-,
+-,6,-,-,-,-,-,-,-,-,-,-,

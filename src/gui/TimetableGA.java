@@ -9,6 +9,18 @@ import dao.GeneticAlgorithm;
 import dao.Population;
 import dao.Timetable;
 import dto.FPTClass;
+import java.io.BufferedReader;
+import java.io.BufferedWriter;
+import java.io.FileNotFoundException;
+import java.io.FileWriter;
+import java.io.IOException;
+import java.io.PrintWriter;
+import java.util.ArrayList;
+import java.io.File;
+import java.io.FileInputStream;
+import java.io.FileOutputStream;
+import java.io.FileReader;
+import java.io.IOException;
 
 /**
  *
@@ -44,8 +56,9 @@ import dto.FPTClass;
  */
 public class TimetableGA {
 
-    public static void main(String[] args) {
+    public static void main(String[] args) throws FileNotFoundException {
     	// Get a Timetable object with all the available information.
+        
         Timetable timetable = initializeTimetable();
         
         // Initialize GA
@@ -90,7 +103,9 @@ public class TimetableGA {
         System.out.println();
         FPTClass classes[] = timetable.getClasses();
         int classIndex = 1;
-        for (FPTClass bestClass : classes) {
+        
+            for (FPTClass bestClass : classes) {
+       
             System.out.println("Class " + classIndex + ":");
             System.out.println("Subject: " + 
                     timetable.getSubject(bestClass.getSubjectId()).getSubjectName());
@@ -106,7 +121,58 @@ public class TimetableGA {
             System.out.println("-----");
             classIndex++;
         }
+        FPTClass matrix[][] = new FPTClass[10][30];
+        String cl[] = {"SE1501" , "SE1502", "SE1503", "SE1504", "SE1505", "SE1506", "SE1507", "SE1508", "SE1509","SE1510"};
+        for(FPTClass bestClass: classes){
+            int idx = -1;
+            for(int i =0 ; i < 10 ; i++)
+                if(bestClass.getGroupId().equals(cl[i])){
+                    idx = i; break;
+                }
+            matrix[idx][bestClass.getSlotId() - 1] = bestClass;
+        }
+         try {
+            FileWriter fw = new FileWriter("Timetable.csv");
+            
+            BufferedWriter bw = new BufferedWriter(fw);
+            fw.write(",Class,");
+            for(int i =0 ; i < 10 ; i++) fw.write(cl[i] +",");
+            fw.write('\n');
+            String day[] = {"Mon" , "Tue" , "Wed" , "Thur" , "Fri" };
+            int day_now = 0 ;
+            int loop = 1;
+            for(int j= 0 ; j <30;j++){
+                if(loop == 1 || loop == 7){
+                        loop = 1;
+                        fw.write(day[day_now++] + ",");
+                    }else fw.write("-,");
+                    fw.write(loop + ",");
+                                        loop++;
+
+                for(int i =0 ; i < 10; i++){
+                    
+                    
+                    if(matrix[i][j] != null){
+                        fw.write(matrix[i][j].toString() +",");
+                    }else fw.write("-,");
+                }
+                fw.write('\n');
+            }
+            bw.close();
+            fw.close();
+        } catch (IOException e) {
+            System.out.println("error");
+        }
+       
+       
     }
+        
+
+    
+    
+    
+        
+    
 
     /**
      * Creates a Timetable with all the necessary course information.
